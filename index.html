@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Genrator</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="container w-full h-[100vh] flex justify-center items-center ">
+<div class=" w-[400px] h-[450px] flex flex-col justify-center items-center rounded-md gap-y-3">
+    <h1 class="text-4xl font-mono font-semibold  ">Password Generator</h1>
+
+    <!-- Display Box -->
+    <div class="display-container w-full flex justify-between   py-2 px-1 rounded-[1rem] mx-4 my-0 pt-[0.35rem]">
+
+        <input readonly placeholder=" Password" class="input rounded-md  w-full px-[1.15rem] py-[0.5rem] pr-[3.25rem] tracking-[1rem]  leading-[30px] text-[1.5rem]" data-passwordDisplay >
+
+        <button data-copy class="pr-[1.2rem]">
+            <span data-copyMsg class="tooltip w-20 absolute top-[16%] left-[60%]"></span>
+
+            <img src="assets/copy.svg" alt="copy" width="23" height="23" class="hover:scale-110 " id="copy-btn" >
+        </button>
+    </div>
+
+    <!-- slider, checkboxes, generate-button -->
+    <div class="input-container flex flex-col rounded-[1rem] p-[2rem] text-white w-full text-[1.2rem]">
+
+        <div class="length-container flex flex-row justify-between  rounded-md px-1">
+            <p class="flex justify-start text-[1.5rem]">Password Length</p>
+            <p id="lengthNumber" class="flex justify-end text-yellow-400 text-[1.5rem]"></p>
+        </div>
+        
+        <!-- Slider -->
+        <div class="pt-1 w-">
+            <input type="range" min="1" max="20" step="1" class="slider w-full" id="lengthSlider" >
+        </div>
+
+        <!-- checkboxes -->
+        <div class="check">
+            <input type="checkbox" id="uppercase">
+            <label for="uppercase">Includes Uppercase Letters</label>
+        </div>
+
+        <div class="check">
+            <input type="checkbox" id="lowercase">
+            <label for="lowercase">Includes Uppercase letters</label>
+        </div>
+
+        <div class="check">
+            <input type="checkbox" id="Numbers">
+            <label for="Numbers">Includes Numbers</label>
+        </div>
+
+        <div class="check">
+            <input type="checkbox" id="Symbols">
+            <label for="Symbols">Includes Symbols</label>
+        </div>
+
+        <!-- Strength Section -->
+        <div class="strength-container text-[1.5rem] flex flex-row justify-between items-center   px-2 my-[1rem]">
+            <p class="">Strength</p>
+            <div id="indicator" class="w-[1.5rem] h-[1.5rem] rounded-[50%] shadow-2xl"></div>
+        </div>
+
+        <!-- Generate Password -->
+        <button class="Generate-button px-2 py-2 text-[1.3rem]  rounded-[1rem] uppercase  hover:scale-105 tracking-wide ">Generate Password</button>
+    </div>
+
+</div> 
+</div>
+    <script src="index.js"></script>
+</body>
+</html>
