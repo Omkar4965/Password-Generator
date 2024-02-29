@@ -1,6 +1,7 @@
 ## Password-Generator
 
-![image](https://github.com/Omkar4965/Password-Generator/assets/115718315/80276dd9-7e85-494c-8f43-27df9c4e8e1e)
+![image](https://github.com/Omkar4965/Password-Generator/assets/115718315/fa7d60c6-d11a-47c8-b9a3-15a2f4a3dc3d)
+
 
 <br><br>
 
